@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>运营总览 · 药品保险报销活动福利平台</title>
+  <title>理赔审核 · 药品保险报销活动福利平台</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body data-page="dashboard">
+<body data-page="claims">
   <div class="app-shell">
     <aside class="sidebar" aria-label="后台菜单">
       <div class="brand">
@@ -37,7 +37,7 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">运营后台 / PC 管理端</p>
-          <h1>运营总览</h1>
+          <h1>理赔审核</h1>
         </div>
         <div class="top-actions">
           <button class="btn ghost">导出运营日报</button>
@@ -46,24 +46,21 @@
         </div>
       </header>
 
-      <section id="dashboard" class="panel hero-panel">
-        <div class="hero-copy">
-          <p class="eyebrow">多活动运营 · 人工审核 · 线下打款</p>
-          <h2>统一承接保险药品福利活动的报名、理赔、导出与状态维护</h2>
-          <p>后台以标准 Admin 布局呈现活动配置、报名审核、理赔审核、会员资料、合作药房与客服信息等运营功能。</p>
+      <section id="claims" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Claim</p><h2>理赔申请管理</h2></div><button class="btn ghost">导出待打款申请单</button></div>
+        <div class="kanban">
+          <article><span>待受理</span><strong>31</strong><p>发票、小票、处方、银行卡信息待核验</p></article>
+          <article><span>受理中</span><strong>54</strong><p>运营人员正在人工审核理赔资料</p></article>
+          <article><span>打款处理中</span><strong>16</strong><p>已导出给保险公司线下打款</p></article>
+          <article><span>已完成打款</span><strong>827</strong><p>批量导入打款结果后完成状态更新</p></article>
         </div>
-        <div class="hero-status">
-          <span class="status-pill success">活动进行中 8</span>
-          <span class="status-pill warning">待审核 42</span>
-          <span class="status-pill info">待打款 16</span>
-        </div>
-      </section>
-
-      <section class="stats-grid" aria-label="运营指标">
-        <article class="stat-card"><span>活动总数</span><strong>18</strong><em>本月新增 3 个</em></article>
-        <article class="stat-card"><span>报名申请</span><strong>2,436</strong><em>通过率 86.2%</em></article>
-        <article class="stat-card"><span>理赔订单</span><strong>928</strong><em>待受理 31 单</em></article>
-        <article class="stat-card"><span>已完成打款</span><strong>¥1,286,500</strong><em>线下处理后导入</em></article>
+        <table class="data-table">
+          <thead><tr><th>理赔单号</th><th>用户</th><th>药品</th><th>消费金额</th><th>申请金额</th><th>药房</th><th>状态</th><th>审核操作</th></tr></thead>
+          <tbody>
+            <tr><td>LP20260516009</td><td>王敏</td><td>奥希替尼</td><td>¥18,600</td><td>¥9,300</td><td>康宁大药房</td><td><span class="tag warning">待受理</span></td><td><button>受理</button><button>驳回</button><button>查看凭证</button></td></tr>
+            <tr><td>LP20260515031</td><td>陈浩</td><td>阿达木单抗</td><td>¥7,980</td><td>¥3,990</td><td>益民药房</td><td><span class="tag info">打款处理中</span></td><td><button>更新状态</button></td></tr>
+          </tbody>
+        </table>
       </section>
     </main>
   </div>
