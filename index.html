@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>药品保险报销活动福利平台 · 运营后台 DEMO</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <a class="active" href="#dashboard">运营总览</a>
+        <a href="#activities">活动管理</a>
+        <a href="#enrollments">报名审核</a>
+        <a href="#claims">理赔审核</a>
+        <a href="#payments">打款批处理</a>
+        <a href="#members">会员管理</a>
+        <a href="#pharmacies">合作药房</a>
+        <a href="#hotline">一键热线</a>
+        <a href="#permissions">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>DEMO 说明</span>
+        <p>当前仅为前端静态页面，用于客户确认后台运营流程与信息架构。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>药品保险报销活动福利平台</h1>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">导出运营日报</button>
+          <button class="btn primary">新建活动</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section id="dashboard" class="panel hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">多活动运营 · 人工审核 · 线下打款</p>
+          <h2>统一承接保险药品福利活动的报名、理赔、导出与状态维护</h2>
+          <p>后台以标准 Admin 布局呈现活动配置、报名审核、理赔审核、会员资料、合作药房与客服信息等运营功能。</p>
+        </div>
+        <div class="hero-status">
+          <span class="status-pill success">活动进行中 8</span>
+          <span class="status-pill warning">待审核 42</span>
+          <span class="status-pill info">待打款 16</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="运营指标">
+        <article class="stat-card"><span>活动总数</span><strong>18</strong><em>本月新增 3 个</em></article>
+        <article class="stat-card"><span>报名申请</span><strong>2,436</strong><em>通过率 86.2%</em></article>
+        <article class="stat-card"><span>理赔订单</span><strong>928</strong><em>待受理 31 单</em></article>
+        <article class="stat-card"><span>已完成打款</span><strong>¥1,286,500</strong><em>线下处理后导入</em></article>
+      </section>
+
+      <section id="activities" class="panel">
+        <div class="section-head">
+          <div><p class="eyebrow">Activity</p><h2>活动管理</h2></div>
+          <button class="btn primary">新增 / 编辑活动</button>
+        </div>
+        <div class="form-grid compact">
+          <label>活动名称<input value="肺癌靶向药报销福利计划"></label>
+          <label>活动状态<select><option>进行中</option><option>未发布</option><option>已结束</option></select></label>
+          <label>活动时间<input value="2026-05-01 至 2026-12-31"></label>
+          <label>活动二维码<button class="btn block">生成并下载二维码</button></label>
+        </div>
+        <div class="editor-preview">
+          <div>
+            <h3>活动图文内容</h3>
+            <p>支持富文本编辑、图片上传、活动介绍、保障说明、参与流程、理赔规则、注意事项等模块维护。</p>
+          </div>
+          <div class="protocol-list">
+            <span>活动展示协议</span>
+            <button>平台服务协议.pdf</button><button>个人信息告知书.pdf</button><button>活动保障计划.jpg</button>
+          </div>
+        </div>
+
+        <div class="config-block">
+          <div class="section-head slim">
+            <div>
+              <p class="eyebrow">Form Builder</p>
+              <h3>项目表单与协议配置</h3>
+            </div>
+            <button class="btn ghost">新增自定义字段</button>
+          </div>
+          <div class="config-grid">
+            <article class="config-card">
+              <div class="config-title">
+                <span class="config-icon">入</span>
+                <div><b>入组申请表单配置</b><small>按活动项目配置用户报名时需要填写与上传的资料</small></div>
+              </div>
+              <table class="mini-table">
+                <thead><tr><th>字段名称</th><th>类型</th><th>选项/示例</th><th>必填</th></tr></thead>
+                <tbody>
+                  <tr><td>患者姓名</td><td><span class="tag info">文本</span></td><td>请输入真实姓名</td><td>是</td></tr>
+                  <tr><td>就诊医院</td><td><span class="tag success">下拉选择</span></td><td>三甲医院 / 专科医院 / 其他</td><td>是</td></tr>
+                  <tr><td>身份证正反面</td><td><span class="tag warning">图片上传</span></td><td>JPG/PNG，最多 2 张</td><td>是</td></tr>
+                  <tr><td>病历与处方</td><td><span class="tag warning">图片上传</span></td><td>上传示例：病历首页、处方照片</td><td>是</td></tr>
+                </tbody>
+              </table>
+              <div class="upload-samples">
+                <div class="upload-sample"><span>+</span><small>身份证上传示例</small></div>
+                <div class="upload-sample"><span>+</span><small>病历照片上传示例</small></div>
+                <div class="upload-sample"><span>+</span><small>处方照片上传示例</small></div>
+              </div>
+              <div class="protocol-list dense">
+                <span>入组协议（支持多份自定义）</span>
+                <button>入组知情同意书.pdf</button><button>个人信息授权书.pdf</button><button>保障计划确认书.pdf</button>
+              </div>
+            </article>
+            <article class="config-card">
+              <div class="config-title">
+                <span class="config-icon claim">赔</span>
+                <div><b>理赔申请表单配置</b><small>按项目配置理赔字段、凭证上传和理赔协议确认</small></div>
+              </div>
+              <table class="mini-table">
+                <thead><tr><th>字段名称</th><th>类型</th><th>选项/示例</th><th>必填</th></tr></thead>
+                <tbody>
+                  <tr><td>药品名称</td><td><span class="tag info">文本</span></td><td>请输入本次购买药品</td><td>是</td></tr>
+                  <tr><td>购买药房</td><td><span class="tag success">下拉选择</span></td><td>合作药房列表 / 其他药房</td><td>是</td></tr>
+                  <tr><td>发票/小票</td><td><span class="tag warning">图片上传</span></td><td>JPG/PNG，最多 6 张</td><td>是</td></tr>
+                  <tr><td>银行卡信息</td><td><span class="tag warning">图片上传</span></td><td>银行卡正面或账户证明</td><td>是</td></tr>
+                </tbody>
+              </table>
+              <div class="upload-samples">
+                <div class="upload-sample"><span>+</span><small>发票上传示例</small></div>
+                <div class="upload-sample"><span>+</span><small>药品小票上传示例</small></div>
+                <div class="upload-sample"><span>+</span><small>银行卡上传示例</small></div>
+              </div>
+              <div class="protocol-list dense">
+                <span>理赔申请协议（支持多份自定义）</span>
+                <button>理赔承诺书.pdf</button><button>银行卡授权说明.pdf</button><button>责任免除确认书.pdf</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="enrollments" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Enrollment</p><h2>报名申请管理</h2></div><button class="btn ghost">Excel 导出申请数据</button></div>
+        <div class="filters">
+          <input placeholder="活动名称 / 用户姓名 / 手机号">
+          <select><option>全部审核状态</option><option>待审核</option><option>审核通过</option><option>审核拒绝</option></select>
+          <input type="date" value="2026-05-16">
+          <button class="btn primary">查询</button>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>申请编号</th><th>活动</th><th>患者姓名</th><th>手机号</th><th>资料</th><th>协议确认</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td>BM20260516001</td><td>靶向药福利计划</td><td>王敏</td><td>138****7621</td><td>身份证 / 病历 / 处方</td><td>2026-05-16 09:21</td><td><span class="tag warning">待审核</span></td><td><button>查看</button><button>通过</button><button>拒绝</button></td></tr>
+            <tr><td>BM20260515018</td><td>慢病药品补贴活动</td><td>李强</td><td>156****1029</td><td>身份证 / 病历</td><td>2026-05-15 18:03</td><td><span class="tag success">审核通过</span></td><td><button>查看</button></td></tr>
+            <tr><td>BM20260514007</td><td>罕见病用药保障</td><td>赵琳</td><td>133****8710</td><td>处方缺失</td><td>2026-05-14 11:34</td><td><span class="tag danger">审核拒绝</span></td><td><button>查看原因</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="claims" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Claim</p><h2>理赔申请管理</h2></div><button class="btn ghost">导出待打款申请单</button></div>
+        <div class="kanban">
+          <article><span>待受理</span><strong>31</strong><p>发票、小票、处方、银行卡信息待核验</p></article>
+          <article><span>受理中</span><strong>54</strong><p>运营人员正在人工审核理赔资料</p></article>
+          <article><span>打款处理中</span><strong>16</strong><p>已导出给保险公司线下打款</p></article>
+          <article><span>已完成打款</span><strong>827</strong><p>批量导入打款结果后完成状态更新</p></article>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>理赔单号</th><th>用户</th><th>药品</th><th>消费金额</th><th>申请金额</th><th>药房</th><th>状态</th><th>审核操作</th></tr></thead>
+          <tbody>
+            <tr><td>LP20260516009</td><td>王敏</td><td>奥希替尼</td><td>¥18,600</td><td>¥9,300</td><td>康宁大药房</td><td><span class="tag warning">待受理</span></td><td><button>受理</button><button>驳回</button><button>查看凭证</button></td></tr>
+            <tr><td>LP20260515031</td><td>陈浩</td><td>阿达木单抗</td><td>¥7,980</td><td>¥3,990</td><td>益民药房</td><td><span class="tag info">打款处理中</span></td><td><button>更新状态</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="payments" class="panel two-column">
+        <div>
+          <p class="eyebrow">Payment</p><h2>打款批处理</h2>
+          <p>平台不直接支付，仅支持导出打款申请、保险公司线下处理后批量导入结果。</p>
+          <div class="upload-box">拖拽上传打款结果 Excel / 打款凭证压缩包</div>
+        </div>
+        <div class="timeline">
+          <div><b>1. 筛选待打款订单</b><span>按活动、时间、状态生成清单</span></div>
+          <div><b>2. 导出保险公司处理</b><span>包含用户资料与理赔信息</span></div>
+          <div><b>3. 批量导入打款结果</b><span>更新打款时间、凭证与订单状态</span></div>
+        </div>
+      </section>
+
+      <section id="members" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Member</p><h2>会员管理</h2></div><button class="btn ghost">查看会员详情</button></div>
+        <table class="data-table">
+          <thead><tr><th>用户昵称</th><th>手机号</th><th>注册时间</th><th>参与活动</th><th>理赔订单</th><th>资料上传</th></tr></thead>
+          <tbody><tr><td>微信用户-王敏</td><td>138****7621</td><td>2026-05-01</td><td>2 次 / 1 个通过</td><td>3 单 / 2 单完成</td><td>身份证、病历、处方</td></tr><tr><td>微信用户-陈浩</td><td>151****8821</td><td>2026-04-22</td><td>1 次 / 1 个通过</td><td>1 单 / 打款处理中</td><td>发票、小票、银行卡</td></tr></tbody>
+        </table>
+      </section>
+
+      <section class="grid-2">
+        <div id="pharmacies" class="panel">
+          <div class="section-head"><div><p class="eyebrow">Pharmacy</p><h2>合作药房管理</h2></div><button class="btn primary">新增药房</button></div>
+          <div class="card-list">
+            <article><b>康宁大药房</b><span>上海市浦东新区张江路 88 号</span><small>021-88886666 · 关联 3 个活动 · 坐标已维护</small></article>
+            <article><b>益民药房</b><span>北京市朝阳区健康路 16 号</span><small>010-66668888 · 关联 2 个活动 · 支持导航</small></article>
+          </div>
+        </div>
+        <div id="hotline" class="panel">
+          <div class="section-head"><div><p class="eyebrow">Service</p><h2>一键热线管理</h2></div><button class="btn primary">保存配置</button></div>
+          <div class="form-grid single">
+            <label>客服电话<input value="400-800-2026"></label>
+            <label>企业微信客服说明<input value="扫码添加专属客服，工作日 9:00-18:00"></label>
+            <div class="qr-demo">企业微信二维码</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="permissions" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Permission</p><h2>运营账号与权限管理</h2></div><button class="btn primary">新增账号</button></div>
+        <div class="role-grid">
+          <article><b>超级管理员</b><span>活动配置、账号权限、全部数据导出</span></article>
+          <article><b>审核专员</b><span>报名审核、理赔审核、资料查看</span></article>
+          <article><b>客服运营</b><span>会员查看、热线配置、药房信息维护</span></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
