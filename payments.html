@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>运营总览 · 药品保险报销活动福利平台</title>
+  <title>打款批处理 · 药品保险报销活动福利平台</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body data-page="dashboard">
+<body data-page="payments">
   <div class="app-shell">
     <aside class="sidebar" aria-label="后台菜单">
       <div class="brand">
@@ -37,7 +37,7 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">运营后台 / PC 管理端</p>
-          <h1>运营总览</h1>
+          <h1>打款批处理</h1>
         </div>
         <div class="top-actions">
           <button class="btn ghost">导出运营日报</button>
@@ -46,24 +46,17 @@
         </div>
       </header>
 
-      <section id="dashboard" class="panel hero-panel">
-        <div class="hero-copy">
-          <p class="eyebrow">多活动运营 · 人工审核 · 线下打款</p>
-          <h2>统一承接保险药品福利活动的报名、理赔、导出与状态维护</h2>
-          <p>后台以标准 Admin 布局呈现活动配置、报名审核、理赔审核、会员资料、合作药房与客服信息等运营功能。</p>
+      <section id="payments" class="panel two-column">
+        <div>
+          <p class="eyebrow">Payment</p><h2>打款批处理</h2>
+          <p>平台不直接支付，仅支持导出打款申请、保险公司线下处理后批量导入结果。</p>
+          <div class="upload-box">拖拽上传打款结果 Excel / 打款凭证压缩包</div>
         </div>
-        <div class="hero-status">
-          <span class="status-pill success">活动进行中 8</span>
-          <span class="status-pill warning">待审核 42</span>
-          <span class="status-pill info">待打款 16</span>
+        <div class="timeline">
+          <div><b>1. 筛选待打款订单</b><span>按活动、时间、状态生成清单</span></div>
+          <div><b>2. 导出保险公司处理</b><span>包含用户资料与理赔信息</span></div>
+          <div><b>3. 批量导入打款结果</b><span>更新打款时间、凭证与订单状态</span></div>
         </div>
-      </section>
-
-      <section class="stats-grid" aria-label="运营指标">
-        <article class="stat-card"><span>活动总数</span><strong>18</strong><em>本月新增 3 个</em></article>
-        <article class="stat-card"><span>报名申请</span><strong>2,436</strong><em>通过率 86.2%</em></article>
-        <article class="stat-card"><span>理赔订单</span><strong>928</strong><em>待受理 31 单</em></article>
-        <article class="stat-card"><span>已完成打款</span><strong>¥1,286,500</strong><em>线下处理后导入</em></article>
       </section>
     </main>
   </div>

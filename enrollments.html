@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>运营总览 · 药品保险报销活动福利平台</title>
+  <title>报名审核 · 药品保险报销活动福利平台</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body data-page="dashboard">
+<body data-page="enrollments">
   <div class="app-shell">
     <aside class="sidebar" aria-label="后台菜单">
       <div class="brand">
@@ -37,7 +37,7 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">运营后台 / PC 管理端</p>
-          <h1>运营总览</h1>
+          <h1>报名审核</h1>
         </div>
         <div class="top-actions">
           <button class="btn ghost">导出运营日报</button>
@@ -46,24 +46,22 @@
         </div>
       </header>
 
-      <section id="dashboard" class="panel hero-panel">
-        <div class="hero-copy">
-          <p class="eyebrow">多活动运营 · 人工审核 · 线下打款</p>
-          <h2>统一承接保险药品福利活动的报名、理赔、导出与状态维护</h2>
-          <p>后台以标准 Admin 布局呈现活动配置、报名审核、理赔审核、会员资料、合作药房与客服信息等运营功能。</p>
+      <section id="enrollments" class="panel">
+        <div class="section-head"><div><p class="eyebrow">Enrollment</p><h2>报名申请管理</h2></div><button class="btn ghost">Excel 导出申请数据</button></div>
+        <div class="filters">
+          <input placeholder="活动名称 / 用户姓名 / 手机号">
+          <select><option>全部审核状态</option><option>待审核</option><option>审核通过</option><option>审核拒绝</option></select>
+          <input type="date" value="2026-05-16">
+          <button class="btn primary">查询</button>
         </div>
-        <div class="hero-status">
-          <span class="status-pill success">活动进行中 8</span>
-          <span class="status-pill warning">待审核 42</span>
-          <span class="status-pill info">待打款 16</span>
-        </div>
-      </section>
-
-      <section class="stats-grid" aria-label="运营指标">
-        <article class="stat-card"><span>活动总数</span><strong>18</strong><em>本月新增 3 个</em></article>
-        <article class="stat-card"><span>报名申请</span><strong>2,436</strong><em>通过率 86.2%</em></article>
-        <article class="stat-card"><span>理赔订单</span><strong>928</strong><em>待受理 31 单</em></article>
-        <article class="stat-card"><span>已完成打款</span><strong>¥1,286,500</strong><em>线下处理后导入</em></article>
+        <table class="data-table">
+          <thead><tr><th>申请编号</th><th>活动</th><th>患者姓名</th><th>手机号</th><th>资料</th><th>协议确认</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td>BM20260516001</td><td>靶向药福利计划</td><td>王敏</td><td>138****7621</td><td>身份证 / 病历 / 处方</td><td>2026-05-16 09:21</td><td><span class="tag warning">待审核</span></td><td><button>查看</button><button>通过</button><button>拒绝</button></td></tr>
+            <tr><td>BM20260515018</td><td>慢病药品补贴活动</td><td>李强</td><td>156****1029</td><td>身份证 / 病历</td><td>2026-05-15 18:03</td><td><span class="tag success">审核通过</span></td><td><button>查看</button></td></tr>
+            <tr><td>BM20260514007</td><td>罕见病用药保障</td><td>赵琳</td><td>133****8710</td><td>处方缺失</td><td>2026-05-14 11:34</td><td><span class="tag danger">审核拒绝</span></td><td><button>查看原因</button></td></tr>
+          </tbody>
+        </table>
       </section>
     </main>
   </div>
