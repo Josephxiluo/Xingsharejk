@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>账号权限 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="permissions">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>账号权限</h1>
+          <p class="top-desc">配置运营角色、数据权限、页面权限与操作审计。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="panel"><div class="section-head"><div><p class="eyebrow">Permission</p><h2>运营账号与权限管理</h2></div><button class="btn primary">新增账号</button></div><div class="role-grid"><article><b>超级管理员</b><span>活动配置、账号权限、全部数据导出、发布上线</span></article><article><b>活动运营</b><span>活动创建、表单设置、菜单设置、二维码生成</span></article><article><b>审核专员</b><span>入组审核、理赔审核、资料查看、状态维护</span></article><article><b>客服运营</b><span>会员查看、热线配置、药房信息维护</span></article></div></section><section class="panel"><div class="section-head"><div><p class="eyebrow">Audit Log</p><h2>操作审计</h2></div><button class="btn ghost">导出日志</button></div><table class="data-table"><thead><tr><th>时间</th><th>账号</th><th>动作</th><th>对象</th><th>结果</th></tr></thead><tbody><tr><td>2026-05-16 10:22</td><td>周运营</td><td>发布活动</td><td>HD202605001</td><td><span class="tag success">成功</span></td></tr><tr><td>2026-05-16 09:41</td><td>审核专员A</td><td>入组审核通过</td><td>BM20260516001</td><td><span class="tag success">成功</span></td></tr></tbody></table></section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

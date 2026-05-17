@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>活动中心 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="activities">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>活动中心</h1>
+          <p class="top-desc">管理活动列表、发布状态、配置进度和运营入口。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="section-head"><div><p class="eyebrow">Activity Hub</p><h2>活动列表与配置进度</h2></div><a class="btn primary" href="activity-create.html">新增活动</a></div>
+        <div class="filters">
+          <input placeholder="活动名称 / 编号 / 负责人">
+          <select><option>全部状态</option><option>草稿</option><option>待发布</option><option>进行中</option><option>已结束</option></select>
+          <input type="date" value="2026-05-16">
+          <button class="btn primary">查询</button>
+        </div>
+        <table class="data-table rich-table">
+          <thead><tr><th>活动</th><th>配置完成度</th><th>时间</th><th>入组/理赔</th><th>状态</th><th>快捷操作</th></tr></thead>
+          <tbody>
+            <tr><td><b>肺癌靶向药报销福利计划</b><small>HD202605001 · 负责人：周运营</small></td><td><div class="progress"><i style="width: 92%"></i></div><small>基础信息、双表单、菜单均已完成</small></td><td>2026-05-01 至 2026-12-31</td><td>1,286 / 426</td><td><span class="tag success">进行中</span></td><td><a href="activity-create.html">编辑</a><a href="enrollment-form.html">入组表单</a><a href="claim-form.html">理赔表单</a><a href="activity-menu.html">菜单</a></td></tr>
+            <tr><td><b>慢病药品补贴活动</b><small>HD202604021 · 负责人：李客服</small></td><td><div class="progress"><i style="width: 74%"></i></div><small>待补充理赔表单字段</small></td><td>2026-04-20 至 2026-10-31</td><td>860 / 312</td><td><span class="tag warning">待完善</span></td><td><a href="activity-create.html">编辑</a><a href="claim-form.html">补字段</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="grid-3">
+        <article class="metric-card"><span>草稿活动</span><strong>4</strong><p>未发布，可继续编辑</p></article>
+        <article class="metric-card"><span>待上线</span><strong>2</strong><p>已配置完成，等待审核发布</p></article>
+        <article class="metric-card"><span>进行中</span><strong>8</strong><p>正在接收入组与理赔申请</p></article>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

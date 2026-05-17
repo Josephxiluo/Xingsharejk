@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>理赔表单设置 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="claim-form">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>理赔表单设置</h1>
+          <p class="top-desc">配置理赔申请字段、票据材料、银行卡信息、金额校验和状态流转。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="builder-layout">
+        <div class="panel builder-main">
+          <div class="section-head"><div><p class="eyebrow">Claim Form</p><h2>理赔材料配置</h2></div><button class="btn primary">添加材料项</button></div>
+          <div class="field-card required"><b>购药发票</b><span>图片 / PDF · 必填 · OCR 识别发票金额</span><button>规则</button></div>
+          <div class="field-card required"><b>购药小票</b><span>图片上传 · 必填 · 与药房信息交叉核验</span><button>规则</button></div>
+          <div class="field-card required"><b>处方照片</b><span>图片上传 · 必填 · 关联药品适应症</span><button>规则</button></div>
+          <div class="field-card required"><b>银行卡信息</b><span>开户名 / 卡号 / 开户行 · 导出给保险公司打款</span><button>规则</button></div>
+          <div class="rule-matrix">
+            <h3>金额与状态规则</h3>
+            <div><span>报销金额</span><b>min(发票金额 × 50%, 年度剩余额度)</b></div>
+            <div><span>审核状态</span><b>待受理 → 受理中 → 待打款 → 已完成</b></div>
+            <div><span>异常处理</span><b>资料缺失 / 金额不符 / 药品不在范围内</b></div>
+          </div>
+        </div>
+        <aside class="phone-preview">
+          <div class="phone-top">提交理赔</div>
+          <div class="phone-card"><label>消费金额<input value="18,600"></label><label>申请金额<input value="9,300"></label><div class="upload-mini">+ 上传发票</div><div class="upload-mini">+ 上传处方</div><div class="upload-mini">+ 银行卡信息</div><button>提交理赔申请</button></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

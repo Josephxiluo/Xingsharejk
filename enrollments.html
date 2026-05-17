@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>入组审核 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="enrollments">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>入组审核</h1>
+          <p class="top-desc">运营人员查看用户入组资料，执行通过、拒绝或要求补充材料。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="section-head"><div><p class="eyebrow">Enrollment Review</p><h2>入组申请审核台</h2></div><button class="btn ghost">Excel 导出申请数据</button></div>
+        <div class="filters"><input placeholder="活动名称 / 用户姓名 / 手机号"><select><option>全部审核状态</option><option>待审核</option><option>需补充</option><option>审核通过</option><option>审核拒绝</option></select><input type="date" value="2026-05-16"><button class="btn primary">查询</button></div>
+        <table class="data-table rich-table">
+          <thead><tr><th>申请编号</th><th>用户资料</th><th>入组材料</th><th>协议确认</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td>BM20260516001<small>肺癌靶向药计划</small></td><td><b>王敏</b><small>138****7621 · 身份证已脱敏</small></td><td>身份证 / 病历 / 处方<small>3 项材料待核验</small></td><td>2026-05-16 09:21</td><td><span class="tag warning">待审核</span></td><td><button>查看详情</button><button>通过</button><button>补充材料</button></td></tr>
+            <tr><td>BM20260515018<small>慢病药品补贴</small></td><td><b>李强</b><small>156****1029</small></td><td>身份证 / 病历</td><td>2026-05-15 18:03</td><td><span class="tag success">审核通过</span></td><td><button>详情</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="panel detail-drawer"><h2>审核详情抽屉示意</h2><div class="evidence-grid"><div>身份证正面</div><div>身份证反面</div><div>诊断证明</div><div>处方资料</div></div><textarea>审核备注：资料清晰，诊断与活动适应症匹配。</textarea></section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

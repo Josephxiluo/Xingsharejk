@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>活动菜单设置 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="activity-menu">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>活动菜单设置</h1>
+          <p class="top-desc">配置小程序活动页菜单、页面入口、展示状态和用户端导航预览。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="builder-layout">
+        <div class="panel builder-main">
+          <div class="section-head"><div><p class="eyebrow">Mini Program Menu</p><h2>活动页菜单配置</h2></div><button class="btn primary">新增菜单</button></div>
+          <div class="menu-config"><b>活动介绍</b><span>链接：活动详情页 · 默认展示</span><em>排序 1</em><button>编辑</button></div>
+          <div class="menu-config"><b>立即入组</b><span>链接：入组表单 · 入组通过后隐藏</span><em>排序 2</em><button>编辑</button></div>
+          <div class="menu-config"><b>提交理赔</b><span>链接：理赔表单 · 入组通过后展示</span><em>排序 3</em><button>编辑</button></div>
+          <div class="menu-config"><b>合作药房</b><span>链接：药房地图 · 支持导航</span><em>排序 4</em><button>编辑</button></div>
+          <div class="menu-config"><b>联系客服</b><span>链接：一键热线/企业微信</span><em>排序 5</em><button>编辑</button></div>
+        </div>
+        <aside class="phone-preview activity-phone">
+          <div class="phone-banner">肺癌靶向药福利计划</div>
+          <div class="phone-tabs"><span>活动介绍</span><span>入组</span><span>理赔</span><span>药房</span></div>
+          <div class="phone-card"><h4>最高可报销 ¥30,000</h4><p>上传资料完成审核后，即可提交合规购药票据申请理赔。</p><button>立即入组</button></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

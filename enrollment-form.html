@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>入组表单设置 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="enrollment-form">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>入组表单设置</h1>
+          <p class="top-desc">配置用户报名入组时需要填写的字段、上传材料、协议勾选和审核规则。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="builder-layout">
+        <div class="panel builder-main">
+          <div class="section-head"><div><p class="eyebrow">Form Builder</p><h2>入组表单字段</h2></div><button class="btn primary">新增字段</button></div>
+          <div class="field-card required"><b>患者姓名</b><span>文本输入 · 必填 · 用于审核身份</span><button>编辑</button></div>
+          <div class="field-card required"><b>手机号</b><span>手机号校验 · 必填 · 接收审核通知</span><button>编辑</button></div>
+          <div class="field-card required"><b>身份证正反面</b><span>图片上传 · 最多 2 张 · 自动脱敏展示</span><button>编辑</button></div>
+          <div class="field-card"><b>病历 / 诊断证明</b><span>图片或 PDF · 最多 6 份 · 支持补传</span><button>编辑</button></div>
+          <div class="field-card"><b>参与药品</b><span>下拉选择 · 关联活动药品库</span><button>编辑</button></div>
+          <div class="approval-rules">
+            <h3>审核规则</h3>
+            <label><input type="checkbox" checked> 资料不完整时允许运营发起补充材料</label>
+            <label><input type="checkbox" checked> 入组通过后自动开放理赔入口</label>
+            <label><input type="checkbox"> 同一身份证限制仅入组一次</label>
+          </div>
+        </div>
+        <aside class="phone-preview">
+          <div class="phone-top">入组申请</div>
+          <div class="phone-card"><label>患者姓名<input value="王敏"></label><label>手机号<input value="138****7621"></label><div class="upload-mini">+ 上传身份证</div><div class="upload-mini">+ 上传病历资料</div><button>提交入组申请</button></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

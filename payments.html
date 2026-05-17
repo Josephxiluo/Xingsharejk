@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>打款批处理 · 药品保险报销活动福利平台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="payments">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="后台菜单">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <div>
+          <strong>Fily Admin</strong>
+          <small>药品保险福利平台</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <span class="menu-group">运营工作台</span>
+        <a data-page="dashboard" href="index.html">运营总览</a>
+        <span class="menu-group">活动配置流程</span>
+        <a data-page="activities" href="activities.html">活动中心</a>
+        <a data-page="activity-create" href="activity-create.html">活动创建</a>
+        <a data-page="enrollment-form" href="enrollment-form.html">入组表单设置</a>
+        <a data-page="claim-form" href="claim-form.html">理赔表单设置</a>
+        <a data-page="activity-menu" href="activity-menu.html">活动菜单设置</a>
+        <span class="menu-group">后续运营管理</span>
+        <a data-page="enrollments" href="enrollments.html">入组审核</a>
+        <a data-page="claims" href="claims.html">理赔审核</a>
+        <a data-page="payments" href="payments.html">打款批处理</a>
+        <a data-page="members" href="members.html">会员档案</a>
+        <a data-page="pharmacies" href="pharmacies.html">药房网络</a>
+        <a data-page="hotline" href="hotline.html">客服热线</a>
+        <a data-page="permissions" href="permissions.html">账号权限</a>
+      </nav>
+      <div class="sidebar-card">
+        <span>完整 DEMO 流程</span>
+        <p>覆盖活动创建、入组/理赔表单、活动菜单、小程序预览与报名、理赔、打款等后续运营页面。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">运营后台 / PC 管理端</p>
+          <h1>打款批处理</h1>
+          <p class="top-desc">平台不直接支付，支持导出打款清单、保险公司线下处理后导入结果。</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost">保存草稿</button>
+          <button class="btn primary">发布到小程序</button>
+          <div class="avatar">运营</div>
+        </div>
+      </header>
+
+      <section class="panel two-column">
+        <div><p class="eyebrow">Payment Batch</p><h2>线下打款批次</h2><p>选择已审核通过的理赔申请生成批次，导出给保险公司处理，再导入打款结果和凭证。</p><div class="upload-box">拖拽上传打款结果 Excel / 打款凭证压缩包</div></div>
+        <div class="timeline"><div><b>1. 生成待打款批次</b><span>按活动、时间、状态筛选理赔单</span></div><div><b>2. 导出保险公司模板</b><span>包含用户银行卡、理赔金额与审核备注</span></div><div><b>3. 导入打款结果</b><span>更新打款时间、凭证、失败原因和订单状态</span></div></div>
+      </section>
+      <section class="panel"><div class="section-head"><div><p class="eyebrow">Batch List</p><h2>批次记录</h2></div><button class="btn primary">新建批次</button></div><table class="data-table"><thead><tr><th>批次号</th><th>活动</th><th>笔数</th><th>金额</th><th>状态</th><th>操作</th></tr></thead><tbody><tr><td>FK20260516001</td><td>肺癌靶向药计划</td><td>16</td><td>¥146,800</td><td><span class="tag info">保险公司处理中</span></td><td><button>下载模板</button><button>导入结果</button></td></tr></tbody></table></section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
